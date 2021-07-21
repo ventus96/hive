@@ -1,16 +1,14 @@
 {
-	"powers": [
-		"origins:arthropod",
-		"bee:pollinator",
-		"bee:sting",
-		"bee:fumble",
+	"powers": [	
 		"bee:bumble",
-		"bee:delicate_wings",
-		"bee:cannae_swim",
-		"bee:homebody",
-		"bee:picky_eater",
+		"origins:slow_falling",
+		"bee:sting",
 		"bee:floral_diet",
-		"bee:natural_bonus"
+		"origins:water_vulnerability",
+		"bee:homebody",
+		"bee:delicate_wings",
+		"origins:arthropod",
+		"bee:pollen_particles"
 	],
 	"icon": "minecraft:honeycomb",
 	"order": 5,

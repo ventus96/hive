@@ -1,23 +1,14 @@
 {
 	"type": "origins:stacking_status_effect",
-	"min_stacks": 0,
-	"max_stacks": 1,
-	"duration_per_stack": 20,
-	"effects": [
-		{
-			"effect": "minecraft:slowness",
-			"amplifier": 3,
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": true
-		},
-		{
-			"effect": "minecraft:hunger",
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": true
-		}
-	],
+	"min_stacks": -10,
+	"max_stacks": 21,
+	"duration_per_stack": 10,
+	"effect": {
+		"effect": "minecraft:hunger",
+		"is_ambient": true,
+		"show_particles": false,
+		"show_icon": true
+	},
 	"condition": {
 		"type": "origins:and",
 		"conditions": [
@@ -31,5 +22,5 @@
 		]
 	},
 	"name": "Homebody",
-	"description": "You simply HAVE to return home at night. The thought of being out and about and away from your hive at such a dangerous time makes you ill."
+	"description": "The thought of being out and about and away from home at night makes you ill."
 }

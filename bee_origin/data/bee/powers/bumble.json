@@ -17,7 +17,7 @@
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false,
-				"duration": 6000
+				"duration": 2147483647
 			}
 		}
 	},
@@ -26,5 +26,5 @@
 		"should_render": false
 	},
 	"name": "Bumble",
-	"description": "Reach new heights, but gently."
+	"description": "You can fly. Reach new heights, but gently."
 }

@@ -4,11 +4,14 @@
 		"type": "origins:apply_effect",
 		"effect": { 
 			"effect": "minecraft:poison",
-			"amplifier": 3,
-			"duration": 60
+			"duration": 120
 		}
 	},	
+	"damage_condition": {
+    	"type": "origins:name",
+    	"name": "player"
+	},
 	"cooldown": 100,
-	"name": "Sting",
-	"description": "You can sting whilst attacking, inflicting temporary poison."
+	"name": "Stinger",
+	"description": "You can sting when directly attacking, inflicting poison on your foes."
 }

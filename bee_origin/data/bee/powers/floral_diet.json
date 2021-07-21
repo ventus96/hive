@@ -1,25 +1,92 @@
 {
-	"type": "origins:action_over_time",
-	"entity_action": {
-		"type": "origins:feed",
-		"food": 2,
-		"saturation": 1.0
+	"type": "origins:multiple",
+	"small_flowers" : {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:feed",
+			"food": 1,
+			"saturation": 1.0
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:in_tag",
+						"tag": "minecraft:small_flowers"
+					},
+					{
+						"type": "origins:offset",
+						"y" : 1,
+						"type": "origins:in_tag",
+						"tag": "minecraft:small_flowers"
+					}
+				]
+			}
+		}
 	},
-	"interval": 20,
-	"condition": {
-		"type": "origins:in_block",
-		"block_condition": {
+	"tall_flowers": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:apply_effect",
+				"effects": [
+				{
+				"effect": "minecraft:absorption",
+				"is_ambient": true,
+				"show_particles": true,
+				"show_icon": true,
+				"duration": 2400
+				},
+				{
+				"effect": "minecraft:regeneration",
+				"is_ambient": true,
+				"amplifier": 1,
+				"show_particles": true,
+				"show_icon": true,
+				"duration": 100
+				}
+				]
+			},
+			"chance": 0.25
+		},
+		"interval": 100,
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:in_tag",
+						"tag": "minecraft:tall_flowers"
+					},
+					{
+						"type": "origins:offset",
+						"y" : 1,
+						"type": "origins:in_tag",
+						"tag": "minecraft:tall_flowers"
+					}
+				]
+			}
+		}
+	},
+	"restrict_food": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:in_tag",
-					"tag": "minecraft:small_flowers"
+					"type": "origins:food"
 				},
-				{
-					"type": "origins:offset",
-					"y" : 1,
-					"type": "origins:in_tag",
-					"tag": "minecraft:small_flowers"
+				{      
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:honey_bottle"
+					},
+					"inverted": true
 				}
 			]
 		}
